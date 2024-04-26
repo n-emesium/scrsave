@@ -46,6 +46,9 @@ public class ScreenSaver {
         return new int[]{x,y};
     }
     private void printScr() {
+        for (int i = 0; i < 15; i++) {
+            System.out.println();
+        }
         System.out.println("\n");
         for (char[] c : screen) {
             for (char d : c) {
@@ -54,6 +57,9 @@ public class ScreenSaver {
             System.out.println();
         }
         System.out.println("\n");
+        for (int i = 0; i < 15; i++) {
+            System.out.println();
+        }
     }
     public void scrSave() { //only public and usable function
         int[] start = genRandMov();
@@ -62,7 +68,7 @@ public class ScreenSaver {
             mv(start);
             printScr();
             try {
-                Thread.sleep(2000);
+                Thread.sleep(250);
             } catch(InterruptedException e) {
                 e.printStackTrace();
             }
